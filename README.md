@@ -5,5 +5,5 @@
 <img src="https://github.com/hyeseongkim0/Linux/blob/main/images/cyclegan_bashfile.PNG" width="120%">
 
 
-#### .sh file?
+#### model.sh file?
 Check [here](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/blob/master/scripts/download_pix2pix_model.sh#L3) for all the available pix2pix models. For example, if you would like to download label2photo model on the Facades dataset,
