@@ -1,5 +1,9 @@
 # Linux
 
+MobaXterm install
+
+tmux --> 별도로 터미널 관리 --> 컴퓨터가 꺼져도 터미널은 유지됩니다. [[Linux] tmux 사용법](https://velog.io/@ur-luella/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95)
+
 #### Linux 디스크 다 찼을 때 폴더별 용량 확인법
 
 du -h --max-depth=1
