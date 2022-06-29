@@ -1,6 +1,12 @@
 # Linux
 
-가상환경 세팅 environment.yml
+### cuda version check
+
+```python
+nvcc -v
+```
+
+### 가상환경 세팅 environment.yml
 
 [Conda 가상환경 그대로 옮기기](https://velog.io/@sheoyonj/Conda-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%EA%B7%B8%EB%8C%80%EB%A1%9C-%EC%98%AE%EA%B8%B0%EA%B8%B0)
 
