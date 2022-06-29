@@ -50,6 +50,24 @@ bash script 에서 다른 script 의 변수, 함수 등을 이용하기 위해�
 
 <img src="https://github.com/hyeseongkim0/Linux/blob/main/images/bash.PNG" width="100%">
 
+### bash 파일에서 conda activate 가상환경 실행 오류 
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/sh file.PNG" width="100%">
+
+source: not found 이므로 source를 재설정해야만 가상환경 activate가 제대로 될 것 같다.
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/source.PNG" width="100%">
+
+해결 방법은 profile 변경 값을 conda shell script 파일에 적용하는 방법이 있다.
+
+```python
+source ~/anaconda3/etc/profile.d/conda.sh
+```
+
+source를 bash파일에서 수정했으면 다시 터미널에서 sh 파일이름.sh 명령어로 실행해보자.
+
+---
+
 MobaXterm install
 
 tmux --> 별도로 터미널 관리 --> 컴퓨터가 꺼져도 터미널은 유지됩니다. [[Linux] tmux 사용법](https://velog.io/@ur-luella/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95)
