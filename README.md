@@ -4,12 +4,40 @@
 
 [Conda 가상환경 그대로 옮기기](https://velog.io/@sheoyonj/Conda-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%EA%B7%B8%EB%8C%80%EB%A1%9C-%EC%98%AE%EA%B8%B0%EA%B8%B0)
 
+### 가상환경 ymal파일로 만들기
 
-``
-conda create --name newhome python=3.8
+environment.yml 형식은 아래와 같습니다.
 
+```python
+name: pytorch-CycleGAN-and-pix2pix
+channels:
+- pytorch
+- defaults
+dependencies:
+- python=3.6
+- pytorch=1.4.0
+- scipy
+- pip
+- pip:
+  - dominate==2.4.0
+  - torchvision==0.5.0
+  - Pillow==6.1.0
+  - numpy==1.16.4
+  - visdom==0.1.8
+```
+
+environment.yml 파일로 가상환경 생성
+
+```python
 conda env create --file environment.yml 
-``
+```
+
+가상환경 삭제
+
+```python
+conda env remove --n 가상환경이름 
+```
+
 
 MobaXterm install
 
