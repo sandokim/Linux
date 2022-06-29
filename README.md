@@ -38,6 +38,17 @@ conda env create --file environment.yml
 conda env remove --n 가상환경이름 
 ```
 
+# bash
+
+bash script 에서 다른 script 의 변수, 함수 등을 이용하기 위해서는 source 명령을 사용하게 됩니다.
+
+여러 개의 script 에서 동일한 값을 참조하기 위해서 효율적으로 사용할 수 있습니다.
+
+그러나 script 에서 이유를 알 수 없게 source 이 되지 않는 경우가 있습니다.
+
+그 이유는 script 의 첫 줄이 #!/bin/bash 로 되어 있지 않기 때문일 수 있습니다.
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/bash.PNG" width="100%">
 
 MobaXterm install
 
