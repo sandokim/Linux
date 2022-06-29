@@ -74,6 +74,16 @@ VScode에서 F1을 누르고 anaconda3/etc/profile.d/conda.sh로 경로를 설�
 
 source를 bash파일에서 수정했으면 다시 터미널에서 sh 파일이름.sh 명령어로 실행해보자.
 
+해보니 문제가 not found source가 제일 처음 문제였고, bash file에서는 source 명령어 대신 .을 써서해야하는 경우가 있다.
+
+아래처럼 따라서 설정하니 문제가 해결되었다.
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/not found source.PNG" width="60%">
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/source dot.PNG" width="60%">
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/source instead dot.PNG" width="80%">
+
 ---
 
 MobaXterm install
