@@ -64,6 +64,10 @@ source: not found 이므로 source를 재설정해야만 가상환경 activate�
 source ~/anaconda3/etc/profile.d/conda.sh
 ```
 
+VScode에서 F1을 누르고 anaconda3/etc/profile.d/conda.sh로 경로를 설정한다.
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/conda_sh.PNG" width="100%">
+
 source를 bash파일에서 수정했으면 다시 터미널에서 sh 파일이름.sh 명령어로 실행해보자.
 
 ---
