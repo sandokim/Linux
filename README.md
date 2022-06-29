@@ -1,5 +1,16 @@
 # Linux
 
+가상환경 세팅 environment.yml
+
+[Conda 가상환경 그대로 옮기기](https://velog.io/@sheoyonj/Conda-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%EA%B7%B8%EB%8C%80%EB%A1%9C-%EC%98%AE%EA%B8%B0%EA%B8%B0)
+
+
+``
+conda create --name newhome python=3.8
+
+conda env create --file environment.yml 
+``
+
 MobaXterm install
 
 tmux --> 별도로 터미널 관리 --> 컴퓨터가 꺼져도 터미널은 유지됩니다. [[Linux] tmux 사용법](https://velog.io/@ur-luella/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95)
