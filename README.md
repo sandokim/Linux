@@ -1,5 +1,32 @@
 # Linux
 
+MobaXterm install
+
+tmux --> 별도로 터미널 관리 --> 컴퓨터가 꺼져도 터미널은 유지됩니다. [[Linux] tmux 사용법](https://velog.io/@ur-luella/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95)
+
+```python
+tmux new -s <session_name>
+tmux kill-session -t <session_name>
+tmux ls
+tmux attach -t <session_name or session_number>
+
+Ctrl B, C --> new window in session
+Ctrl B, , --> window rename
+```
+
+#### Linux 디스크 다 찼을 때 폴더별 용량 확인법
+
+du -h --max-depth=1
+
+#### GPU setting
+
+<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/gpu setting.PNG" width="100%">
+
+#### GPU memory가 꽉 차있을 떄 kill
+
+[리눅스 터미널에서 딥러닝 학습 강제중단했을때 GPU에 남은 메모리 정리하는 방법](https://pulsar-kkaturi.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EB%94%A5%EB%9F%AC%EB%8B%9D-%ED%95%99%EC%8A%B5-%EA%B0%95%EC%A0%9C-%EC%A4%91%EB%8B%A8%ED%96%88%EC%9D%84%EB%95%8C-GPU%EC%97%90-%EB%82%A8%EC%9D%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%A0%95%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+
+
 ### cuda version check
 
 ```python
@@ -91,22 +118,6 @@ source를 bash파일에서 수정했으면 다시 터미널에서 sh 파일이�
 <img src="https://github.com/hyeseongkim0/Linux/blob/main/images/source instead dot.PNG" width="80%">
 
 ---
-
-MobaXterm install
-
-tmux --> 별도로 터미널 관리 --> 컴퓨터가 꺼져도 터미널은 유지됩니다. [[Linux] tmux 사용법](https://velog.io/@ur-luella/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95)
-
-#### Linux 디스크 다 찼을 때 폴더별 용량 확인법
-
-du -h --max-depth=1
-
-#### GPU setting
-
-<img src="https://github.com/hyeseongkim0/Linux/blob/main/images/gpu setting.PNG" width="100%">
-
-#### GPU memory가 꽉 차있을 떄 kill
-
-[리눅스 터미널에서 딥러닝 학습 강제중단했을때 GPU에 남은 메모리 정리하는 방법](https://pulsar-kkaturi.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EB%94%A5%EB%9F%AC%EB%8B%9D-%ED%95%99%EC%8A%B5-%EA%B0%95%EC%A0%9C-%EC%A4%91%EB%8B%A8%ED%96%88%EC%9D%84%EB%95%8C-GPU%EC%97%90-%EB%82%A8%EC%9D%80-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%A0%95%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
 
 [How to write a bash script](https://www.youtube.com/watch?v=F-gskSl4pwQ)
 
