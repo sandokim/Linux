@@ -10,8 +10,16 @@ tmux kill-session -t <session_name>
 tmux ls
 tmux attach -t <session_name or session_number>
 
-Ctrl B, C --> new window in session
-Ctrl B, , --> window rename
+Ctrl+b c Create a new window (with shell)
+Ctrl+b , Rename the current window
+Ctrl+b x Close the current pane
+
+Ctrl+b w Choose window from a list
+Ctrl+b 0 Switch to window 0 (by number )
+Ctrl+b % Split current pane horizontally into two panes
+Ctrl+b " Split current pane vertically into two panes
+Ctrl+b o Go to the next pane
+Ctrl+b ; Toggle between the current and previous pane
 ```
 
 #### Linux 디스크 다 찼을 때 폴더별 용량 확인법
