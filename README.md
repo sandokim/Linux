@@ -1,3 +1,7 @@
+# 원격 ssh 연결
+
+<img src="https://github.com/sandokim/Linux/blob/main/images/원격ssh config file port.png" width="40%">
+
 # Linux
 
 MobaXterm install
