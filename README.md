@@ -36,7 +36,7 @@ Shell Script example
 #!/bin/bash
 ```
 
-명령들이 bin dir의 bash라느 프로그램을 통해 실행된다.
+명령들이 bin dir의 bash라 프로그램을 통해 실행된다.
 
 cpu를 클릭하면 cpu를 기준으로 정렬됨.
 
