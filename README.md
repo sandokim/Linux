@@ -1,3 +1,125 @@
+# Linux
+
+```python
+sudo apt-get install htop
+htop
+sudo apt-get install git
+git clone https://github.com/facebook/react.git
+
+mkdir why; cd why # 세미콜론을 본 다음에 cd why 명령어가 실행된다.
+
+ls --help | grep sort # 프로그램과 프로그램을 파이프로 연결할 수 있다.
+
+ps aux | grep apache # apache라는 텍스트가 포함되어 있는 것만 화면에 가져온다.
+
+```
+### bash
+bash는 shell 중에서 shell이라는 카테고리에 속하는 구체적인 제품 중에 하나인 bash라고 하는 프로그램이다.
+```python
+echo $0
+-bash # bash라는 shell이 동작하고 있는 상태이고 내가 입력하고 있는 명령은 bash를 통해서 커널로 전달되고 있고 커널에서 만들어진 결과는 bash를 통해서 우리의 메인화면에 표시되고 있는 것읻.
+```
+
+### zsh vs bash
+zshell을 통해서 kernel에 접근
+
+bash를 통해서 kernel에 접근
+
+사용자의 편의에 맞게 shell을 선택하여 사용한다.
+
+### Shell Script
+순차적으로 실행해야하는 명령들의 스크립트를 미리 저장
+
+Shell Script example
+
+```python
+#!/bin/bash
+```
+
+명령들이 bin dir의 bash라느 프로그램을 통해 실행된다.
+
+cpu를 클릭하면 cpu를 기준으로 정렬됨.
+
+Time은 프로그램이 실행된 시간
+
+Command는 어떤 명령으로 프로그램이 실행되었는가
+
+Mem: 물리적인 메모리의 크기, 프로세스가 물리적으로 얼마나 메모리를 쓰고 있는가에 대한 퍼센트
+
+RES: 실제적인 메모리의 사용량
+
+코어가 4개인 1,2,3,4 각각의 cpu가 얼마나 바쁜지
+
+<img src="https://github.com/sandokim/Linux/blob/main/images/cpu 1234.jpg" width="100%">
+
+필요한 실행파일의 위치를 찾는 방법
+```python
+echo $PATH
+```
+
+어떤 명령어를 실행했을때 그 명령어가 어디에 위치하고 있는가라는 것을 지정해서 여러분이 명령을 실행할 때마다 그 명령에 전체 경로를 적지 않아도 되는 아주 편리한 기능인 $PATH라는 변수 (환경변수)
+
+```python
+cd ~  # 홈디렉터리로 change
+cd /  # root 디렉터리로 change
+cd .. # 상위 디렉터리로 change
+./ # 현재 디렉터리
+. # 현재 디렉터리
+.. # 상위 디렉터리
+
+패키지 설명 출력
+man chmod
+chmod --help
+
+ls
+ls -al # 숨김파일까지 모두 출력, 숨김파일은 .으로 시작한다.
+```
+
+### Linux - startup script bashrc
+셀에 접속했을 때, 셀이 시작됐을 때 어떤 특정한 명령어가 자동으로 실행되도록 하는 방법
+
+홈디렉터리로 가고 .bashrc라는 파일을 만들면 셸에 접속했을 때, 셸이 실행될 때 셸이라는 프로그램이 .bashrc라고 하는 파일 안에 있는 코드를 실행하도록 약속되어 있다. bash라는 문법에 따라 코드를 작성한다.
+```python
+cd ~
+bash
+exit
+```
+```python
+echo $PATH
+```
+PATH의 값을 변경한다든지, 그런 것들을 스타트업 스크립트 .bashrc라고하는 스크립트 안에다가 PATH와 관련된 코드를 작성하면 셸이 시작될 때 그 부분이 바뀐다.
+
+$표시가 있으면 이 사용자가 현재 일반유저라는 뜻이다.
+#표시가 있으면 이 사용자가 현재 슈퍼유저라는 뜻이다.
+
+```python
+/root # root사용자의 root 디렉터리
+pwd # present working directory
+```
+
+permission
+
+<img src="https://github.com/sandokim/Linux/blob/main/images/permission rwx.jpg" width="100%">
+
+bash라는 프로그램을 실행시켜서 그 프로그램에게 hi-machine.sh(.sh파일)를 해석해서 실행하라하면 실행이 된다.
+
+/bin/bash # 어떤 특정 프로그램(해석기, 파서)을 통해서 어떤 특정한 프로그래밍 언어를 실행시키는 것은 아무런 제약이 없다.
+ 
+./ 현재 디렉터리에서 hi-machine.sh 파일을 실행시키고 싶다면 파일에게 실행권한을 줘야한다. 그때 사용하는 것이 execute.
+
+ls -l 로 owner, group, others의 읽기,쓰기,실행(rwx) 권한을 확인
+
+<img src="https://github.com/sandokim/Linux/blob/main/images/router.jpg" width="100%">
+
+웹브라우저 입장에서 자신이 설치돼 있는 그 컴퓨터에 설치되어 있는 웹 서버에 접속할 때 ip addr 명령어로 ip를 알아낼 수도 있지만 그걸 몰라도 언제나
+127.0.0.1 이나 localhost라는 ip, 도메인네임을 쓰게 되면 접속할 수 있다.
+
+<img src="https://github.com/sandokim/Linux/blob/main/images/WB_WS.jpg" width="100%">
+
+SSH
+
+<img src="https://github.com/sandokim/Linux/blob/main/images/SSH.jpg" width="100%">
+
 # 원격 ssh 연결
 
 <img src="https://github.com/sandokim/Linux/blob/main/images/원격ssh config file port.png" width="40%">
