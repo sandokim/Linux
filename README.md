@@ -20,6 +20,108 @@ echo $0
 -bash # bash라는 shell이 동작하고 있는 상태이고 내가 입력하고 있는 명령은 bash를 통해서 커널로 전달되고 있고 커널에서 만들어진 결과는 bash를 통해서 우리의 메인화면에 표시되고 있는 것읻.
 ```
 
+### bash script 만들기
+
+1. nano sando.sh
+```bash
+#!/bin/bash
+
+name="Sando" # create the variable 'name'
+
+echo "Good Morning $name!" # use the variable with $ sign.
+
+sleep 1 # make it sleep in between commands
+
+echo "You're looking good today $name!"
+
+sleep 1
+
+echo "You have the best personality I've ever seen $name!"
+```
+
+```bash
+#!/bin/bash
+
+echo "What is your name?"
+
+read name # 터미널 창에서 매번 input으로 name이라는 variable의 값을 지정해줄 수 있다.
+
+echo "Good Morning $name!" # use the variable with $ sign.
+
+sleep 1 # make it sleep in between commands
+
+echo "You're looking good today $name!"
+
+sleep 1
+
+echo "You have the best personality I've ever seen $name!"
+```
+
+```bash
+#!/bin/bash
+
+name=$1 # positional parameter
+compliment=$2
+
+echo "Good Morning $name!" # use the variable with $ sign.
+
+sleep 1 # make it sleep in between commands
+
+echo "You're looking good today $name!"
+
+sleep 1
+
+echo "You have the best $compliment I've ever seen $name!"
+```
+
+```terminal
+./sando.sh Abbey eyes   # positional parameter를 bash script, .sh파일을 실행할 때 줄 수 있다.
+Good Morning Abbey!
+You're looking good today Abbey!
+You have the best eyes I've ever seen Abbey!
+```
+
+```bash
+#!/bin/bash
+
+name=$1 # positional parameter
+compliment=$2
+
+user=$(whoami) # variable = command
+date=$(date)
+whereami=$(pwd)
+
+echo "Good Morning $name!" # use the variable with $ sign.
+sleep 1 # make it sleep in between commands
+echo "You're looking good today $name!"
+sleep 1
+echo "You have the best $compliment I've ever seen $name!"
+
+echo "You are currently logged in as $user and you are in the directory $whereami. Also today is: $date"
+```
+
+```terminal
+./sando.sh Abbey eyes   # positional parameter를 bash script, .sh파일을 실행할 때 줄 수 있다.
+Good Morning Abbey!
+You're looking good today Abbey!
+You have the best eyes I've ever seen Abbey!
+You are currently logged in as root and you are in the directory /root. Also today is: Wed Apr 6 01:56:16 PM UTC 2022
+```
+
+
+ctrl+X, Y, Enter --> save bash script.
+
+2.make it executable
+
+```
+chmod +x sando.sh
+```
+
+3.bash script 실행
+```
+./sando.sh
+```
+
 ### zsh vs bash
 zshell을 통해서 kernel에 접근
 
