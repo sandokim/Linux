@@ -108,6 +108,29 @@ You have the best eyes I've ever seen Abbey!
 You are currently logged in as root and you are in the directory /root. Also today is: Wed Apr 6 01:56:16 PM UTC 2022
 ```
 
+* $0 : Script를 실행시킬 때 프로그램의 이름이 포함된 첫 번째 문자열이 저장된다. i.e. ./sando.sh
+* $1, ...$N : argument들이 순서대로 저장된다. 위치 매개변수( Positional Parameter )라고 불리운다.
+
+```terminal
+./script.sh Hello World
+
+$0 = ./script.sh
+$1 = Hello
+$2 = World
+```
+
+예시
+```bash
+#!/usr/bin/env bash
+
+CONFIG=$1
+GPUS=$2
+PORT=${PORT:-29527}
+
+PYTHONPATH="$(dirname $0)/..":$PYTHONPATH \
+python -m torch.distributed.launch --nproc_per_node=$GPUS --master_port=$PORT \
+    $(dirname "$0")/train.py $CONFIG --launcher pytorch ${@:3}
+```
 
 ctrl+X, Y, Enter --> save bash script.
 
