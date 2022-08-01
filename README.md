@@ -1,5 +1,9 @@
 # Linux
 
+가상환경 복제하여 새로 생성
+
+$ conda create -n [env-name] --clone [src-env-name]
+
 ```python
 sudo apt-get install htop
 htop
